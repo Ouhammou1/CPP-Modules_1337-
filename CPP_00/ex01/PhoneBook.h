@@ -25,23 +25,15 @@ private:
 	int index;
 	int Max_Contacts;
 public:
-	// void set_ary_contact();
 	int get_index();
 	void AddContact();
 	void displayContacts();
 	std::string trancat(std::string str);
 	void	PrintFerstLine();
-	// bool    isNumber(std::string   &string_nbr);
-
-
 
 	PhoneBook();
 	~PhoneBook();
 };
 
-// static std::string trancat(std::string str);
-// static std::string trancat(std::string str);
-
-// std::string PhoneBook::trancat(std::string str);
 
 #endif
