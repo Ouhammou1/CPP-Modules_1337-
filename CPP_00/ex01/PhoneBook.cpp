@@ -41,8 +41,8 @@ int	checkValid(std::string str)
 {
 	if(str.empty())
 		return 1;
-	int i = 0;
-	while (str[i])
+	size_t i = 0;
+	while (str[i] != '\0')
 	{
 		if (str[i] != ' ' && str[i] != '\t')
 			return 0;
@@ -73,28 +73,28 @@ void PhoneBook::AddContact()
 	std::getline(std::cin , last_name );
 	if (checkValid(last_name) == 1)
 	{
-        std::cout << "Invalid first name!" << std::endl;
+        std::cout << "Invalid Last name!" << std::endl;
 		return;
 	}
 	std::cout << "Enter Nickname          :";
 	std::getline(std::cin , nickname );
 	if (checkValid(nickname) == 1)
 	{
-        std::cout << "Invalid first name!" << std::endl;
+        std::cout << "Invalid Nick name!" << std::endl;
 		return;
 	}
 	std::cout << "Enter Phone number      :";
 	std::getline(std::cin , phone_number );
 	if (checkValid(phone_number) == 1)
 	{
-        std::cout << "Invalid first name!" << std::endl;
+        std::cout << "Invalid Phone number!" << std::endl;
 		return;
 	}
 	std::cout << "Enter Darkest secret    :";
 	std::getline(std::cin , darkest_secret) ;
 	if (checkValid(darkest_secret) == 1)
 	{
-        std::cout << "Invalid first name!" << std::endl;
+        std::cout << "Invalid Darkest secret!" << std::endl;
 		return;
 	}
 	this->ary_contact[index].set_first_name(first_name);
@@ -121,8 +121,6 @@ void		PhoneBook::PrintFerstLine()
 
 int         isNumber(std::string   &string_nbr)
 {
-    int i =0;
-    std::cout  << "string  is  " << string_nbr << std::endl;
     if(string_nbr.empty())
         return  false;
     

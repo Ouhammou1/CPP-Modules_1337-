@@ -1,5 +1,5 @@
 CC =c++
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address -std=c++98 
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 
 CFILES = awesome.cpp contact.cpp  PhoneBook.cpp 
 
 OBJS = $(CFILES:.cpp=.o)
@@ -7,7 +7,7 @@ NAME = awesome
 
 all : $(NAME)
 $(NAME):$(OBJS) PhoneBook.h
-	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	@rm -rf $(OBJS)

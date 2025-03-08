@@ -9,6 +9,8 @@ int main()
 
 	while (true)
 	{
+		if (std::cin.eof())
+			exit(0);
 		std::cout << "Enter (ADD, SEARCH or  EXIT): " << std::endl;
 	    std::getline(std::cin , str);
 

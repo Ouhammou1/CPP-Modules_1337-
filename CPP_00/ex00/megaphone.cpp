@@ -1,23 +1,26 @@
 #include <iostream>
 
-void 	convert_to_upper(std::string str)
+
+void 	ConvertTtoTupper(std::string &str)
 {
-	int i ;
+	size_t i ;
 
 	i = 0;
-	while (str[i] !='\0')
+	while (i < str.size())
 	{
-		if (str[i] >= 'a' && str[i] <= 'z') { 
-            str[i] -= 32;
-			std::cout << str[i];
-        }
-		else
-			std::cout << str[i];
+		// if (str[i] >= 'a' && str[i] <= 'z') { 
+        //     str[i] -= 32;
+		// 	std::cout << str[i];
+        // }
+		// else
+		// 	std::cout << str[i];
+		std::cout << (char)toupper(str[i]);
 		i++;
 	}
+	
 	return ;
 }
-int main(int ac  , char *av[])
+int main(int ac  , char **av)
 {
 
 	int i;
@@ -30,7 +33,10 @@ int main(int ac  , char *av[])
 	i = 1;
 	while (i < ac)
 	{
-		convert_to_upper(av[i]);
+		std::string str = av[i];
+		ConvertTtoTupper(str);
+		if(i < ac - 1)
+			std::cout  << " ";
 		i++;
 	}
 	std::cout << std::endl;
