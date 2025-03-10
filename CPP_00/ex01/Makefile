@@ -1,12 +1,16 @@
 CC =c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 
-CFILES = awesome.cpp contact.cpp  PhoneBook.cpp 
+CFILES = awesome.cpp Contact.cpp  PhoneBook.cpp 
 
 OBJS = $(CFILES:.cpp=.o)
 NAME = awesome
 
 all : $(NAME)
-$(NAME):$(OBJS) PhoneBook.h
+ 
+%.o:%.cpp PhoneBook.h  Contact.h 
+	$(CC) $(CPPFLAGS) -c  $< -o $@
+
+$(NAME):$(OBJS)
 	$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
 clean:

@@ -19,20 +19,24 @@
 
 
 class PhoneBook
-{
-private:
-	Contact ary_contact[8];
-	int index;
-	int Max_Contacts;
-public:
-	int get_index();
-	void AddContact();
-	void displayContacts();
-	std::string trancat(std::string str);
-	void	PrintFerstLine();
+{ 
+	private:
+		Contact ary_contact[8];
+		int index;
+		int Max_Contacts;
+	public:
+		int 		get_index();
+		void 		AddContact();
+		void 		displayContacts();
+		std::string trancat(std::string str);
+		void		PrintFerstLine();
+		int			checkValid(std::string str);
+		int 		checkIsNumber(std::string str );
+		int         isNumber(std::string   &string_nbr);
 
-	PhoneBook();
-	~PhoneBook();
+
+		PhoneBook();
+		~PhoneBook();
 };
 
 

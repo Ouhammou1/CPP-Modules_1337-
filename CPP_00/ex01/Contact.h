@@ -6,7 +6,7 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/31 14:05:35 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/02/23 22:17:19 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/03/10 19:46:00 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #ifndef CONTACT_H
 #define CONTACT_H
 #include <iostream>
+ 
 
-
-
+ 
 
 class Contact
 {

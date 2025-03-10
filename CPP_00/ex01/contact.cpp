@@ -5,21 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/03 10:31:38 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/02/23 22:03:01 by bouhammo         ###   ########.fr       */
+/*   Created: 2025/03/10 19:48:15 by bouhammo          #+#    #+#             */
+/*   Updated: 2025/03/10 19:58:17 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Contact.h"
 
-
+ 
 Contact::Contact()
 {
 }
 Contact::~Contact()
 {
 }
+
 void Contact::set_first_name(std::string first_name)
 {
 	this->first_name = first_name;

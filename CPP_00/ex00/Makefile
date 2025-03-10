@@ -1,4 +1,4 @@
-CC =c++
+CC=c++
 CPPFLAGS= -Wall -Wextra -Werror -std=c++98 
 CFILES= megaphone.cpp
  
@@ -8,7 +8,7 @@ NAME = megaphone
 all: $(NAME)
 $(NAME):$(OBJS) 
 	$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
-
+ 
 clean:
 	@rm -rf $(OBJS)
 

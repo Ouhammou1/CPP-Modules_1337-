@@ -37,7 +37,7 @@ std::string PhoneBook::trancat(std::string str)
 	}
 	return str;
 }
-int	checkValid(std::string str)
+int		PhoneBook::checkValid(std::string str)
 {
 	if(str.empty())
 		return 1;
@@ -53,7 +53,17 @@ int	checkValid(std::string str)
 	
 	return 0;
 }
-
+int 	PhoneBook::checkIsNumber(std::string str )
+{
+	size_t  i = 0;
+	while (i < str.length())
+	{
+		if(!isdigit(str[i]))
+			return 1;
+		i++;
+	}
+	return 0;
+}
 void PhoneBook::AddContact()
 {
 
@@ -85,7 +95,7 @@ void PhoneBook::AddContact()
 	}
 	std::cout << "Enter Phone number      :";
 	std::getline(std::cin , phone_number );
-	if (checkValid(phone_number) == 1)
+	if (checkValid(phone_number) == 1 || checkIsNumber(phone_number) == 1)
 	{
         std::cout << "Invalid Phone number!" << std::endl;
 		return;
@@ -119,10 +129,12 @@ void		PhoneBook::PrintFerstLine()
 
 }
 
-int         isNumber(std::string   &string_nbr)
+int         PhoneBook::isNumber(std::string   &string_nbr)
 {
     if(string_nbr.empty())
-        return  false;
+	{
+        return  -1;
+	}
     
 	if(string_nbr.size() == 1)
 	{
