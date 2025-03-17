@@ -6,7 +6,7 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 04:56:05 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/03/14 00:22:48 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/03/17 02:12:51 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 void 	ReplaceinFile(std::string line, std::fstream  &name ,std::string  s1, std::string  s2 , bool addNewline)
 {
-	(void)addNewline;
 	if (s1.empty() ||  s1 == s2)
 		return ;
 	
@@ -28,15 +27,15 @@ void 	ReplaceinFile(std::string line, std::fstream  &name ,std::string  s1, std:
 	}
 	
 	name <<  line ;
-	// if(addNewline == 0)
-	// 	name << std::endl;
+	if(addNewline == 0)
+		name << std::endl;
 }
 
 int main(int ac , char **av)
 {
 	if(ac != 4)
 	{
-		std::cout << "Invalid Input! Usage: ./program <filename> <s1> <s2>"  << std::endl;
+		std::cerr << "Invalid Input! Usage: ./program <filename> <s1> <s2>"  << std::endl;
 		return 0;
 	}
 	std::string  filename = av[1];

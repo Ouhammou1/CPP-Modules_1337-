@@ -6,7 +6,7 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 19:52:36 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/03/14 05:24:18 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/03/17 02:19:42 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main()
 	}
 	if(count == 4)
 	{
-		std::cout  << "Invalid Input!" << std::endl;
+		std::cerr  << "Invalid Input!" << std::endl;
 		return 0;
 	}
 	Harl obj;
