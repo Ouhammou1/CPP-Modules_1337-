@@ -6,7 +6,7 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 11:38:14 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/03/11 19:36:41 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/03/20 02:02:52 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 class HumanA
 {
 private:
-	Weapon 			&weapon;
 	std::string 	name;
+	Weapon 			&weapon;
 public:
-	HumanA(Weapon &weapon , std::string name) ;
+	HumanA(Weapon &weapon , std::string name);
 	~HumanA();
 
 	
