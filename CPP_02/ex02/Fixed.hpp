@@ -6,7 +6,7 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 03:19:04 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/03/27 01:55:27 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/04/03 07:25:20 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,12 +60,6 @@ public:
 	static const Fixed& min(const Fixed &a ,const  Fixed &b);
 	static Fixed& max(Fixed &a , Fixed &b);
 	static const Fixed& max(const Fixed &a ,const Fixed &b);
-
-
-
-
-
-
 
 
 };

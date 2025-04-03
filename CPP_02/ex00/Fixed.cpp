@@ -6,7 +6,7 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 03:23:50 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/03/27 03:30:05 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/04/03 07:49:32 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ Fixed::~Fixed()
 Fixed::Fixed(const Fixed &original)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	// value = original.getRawBits();
 	*this = original;
 }
 

@@ -6,7 +6,7 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 03:29:42 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/03/26 04:08:40 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/04/03 07:52:11 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ Point& Point::operator=(const Point &point)
 }
 
 
-const Fixed & Point::getX() const
+const Fixed& Point::getX() const
 {
 	return x;
 }
-const Fixed & Point::getY() const
+const Fixed& Point::getY() const
 {
 	return y;
 }
