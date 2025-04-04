@@ -6,7 +6,7 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 04:13:37 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/04/04 22:35:45 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/04/04 22:32:09 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
-	std::cout << "Default ScavTrap constructor called" << std::endl;
+	std::cout << "Default ScavTrap constructor called." << std::endl;
 	this->hitPoint = 100;
 	this->enePoint = 50;
 	this->attdamage = 20;
@@ -23,7 +23,7 @@ ScavTrap::ScavTrap() : ClapTrap()
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-	std::cout << "Parameterized ScavTrap constructor called "  << std::endl;
+	std::cout << "Parameterized ScavTrap constructor called."  << std::endl;
 	this->hitPoint = 100;
 	this->enePoint = 50;
 	this->attdamage = 20;
@@ -31,7 +31,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 }
 ScavTrap::ScavTrap(const ScavTrap &original): ClapTrap(original)
 {
-	std::cout << "Copy constructor of the ScavTrap is called " << std::endl;
+	std::cout << "Copy constructor of the ScavTrap is called." << std::endl;
 }
 ScavTrap& ScavTrap::operator=(const ScavTrap &original)
 {
@@ -44,14 +44,13 @@ ScavTrap& ScavTrap::operator=(const ScavTrap &original)
 }
 ScavTrap::~ScavTrap()
 {
-	std::cout << "The destructor of the ScavTrap is called " << std::endl;
+	std::cout << "The destructor of the ScavTrap is called." << std::endl;
 }
 
 void ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap " << name << " is now in Gate Keeper mode!" << std::endl;
 }
-
 void 	ScavTrap::attack(const std::string& target)
 {
 	if(hitPoint == 0 )
@@ -64,7 +63,7 @@ void 	ScavTrap::attack(const std::string& target)
 		std::cerr << "Error ... " << name << " has no Energy Points left and can't attack!" << std::endl;
 		return;
 	}
-	std::cout << "ClapTrap " << name << " attacks " << target 
+	std::cout << "ScavTrap " << name << " attacks " << target 
 	<< " causing " << attdamage << " points of damage!"<< std::endl;
 	enePoint--;
 }

@@ -1,39 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/29 04:16:38 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/04/04 22:37:01 by bouhammo         ###   ########.fr       */
+/*   Created: 2025/03/30 03:49:23 by bouhammo          #+#    #+#             */
+/*   Updated: 2025/04/04 22:12:55 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#ifndef SERENA_H
-#define SERENA_H
+
 #include <iostream>
-#include  "ClapTrap.hpp"
 
-class ScavTrap :public ClapTrap
+#include "DiamondTrap.hpp"
+
+int main()
 {
-private:
+    std::cout << "GOOD  " << std::endl;
 
-public:
-	ScavTrap(); 
-	ScavTrap(std::string name);
-	ScavTrap(const ScavTrap &original);
-	ScavTrap& operator=(const ScavTrap &original);
-	~ScavTrap();
-
-	void 	guardGate();
-	void 	attack(const std::string& target);
-};
+    DiamondTrap obj("mohmad");
 
 
 
+    obj.display();
+    DiamondTrap obj1;
+    
+    obj1 = obj;
+    obj1.display();
+    // obj1.display1();
+    // obj.display1();
+
+    // obj.attack("nice");
+
+    // obj.whoAmI();
+    // ScavTrap  obbj;
+    // ClapTrap *ptr;
+
+    // ptr = &obbj;
+
+    // ptr->attack("Roobot ");
 
 
-
-#endif
+    
+    return 0;
+}

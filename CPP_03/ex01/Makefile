@@ -21,7 +21,3 @@ fclean: clean
 	@rm -rf $(NAME)
 
 re: fclean all
-
-OK:all clean 
-	@echo "\n\n\033[4;31mMAKE AND EXECUTE PROGRAM\033[0m\n\n"
-	@./$(NAME)
