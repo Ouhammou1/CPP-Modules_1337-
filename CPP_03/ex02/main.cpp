@@ -6,7 +6,7 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 03:49:23 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/03/30 05:02:17 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/04/05 22:33:54 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main()
     FragTrap ft1;
     std::cout << std::endl;
 
-    FragTrap ft2("Fraggy");
+    FragTrap ft2("Carlo Ancelotti");
     std::cout << std::endl;
 
     FragTrap ft3 = ft2;
@@ -32,7 +32,7 @@ int main()
     std::cout << std::endl;
 
     ft2.highFivesGuys();
-	ft2.attack("-------------------> ");
+	ft2.attack("Pep guardiola");
 	ft2.beRepaired(87);
     std::cout << std::endl;
 

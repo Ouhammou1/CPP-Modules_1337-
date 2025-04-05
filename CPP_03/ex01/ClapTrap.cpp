@@ -6,7 +6,7 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 04:13:23 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/03/30 02:14:07 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/04/05 22:30:35 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void 	ClapTrap::takeDamage(unsigned int amount)
 	{
 		hitPoint =  hitPoint - amount;
 	}
-	std::cout << "ClapTrap " << name << " takes " << hitPoint << " points of damage!" << std::endl;
+	std::cout << "ClapTrap " << name << " takes " << amount << " points of damage!" << std::endl;
 }
 void 	ClapTrap::beRepaired(unsigned int amount)
 {

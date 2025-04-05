@@ -6,7 +6,7 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 04:13:33 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/04/04 22:39:11 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/04/05 15:20:50 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,11 @@ int  main()
 	ScavTrap obj("Robot 1");
 
 
-	// obj.display();
+	obj.beRepaired(42);
+	obj.takeDamage(6);
+	obj.takeDamage(4);
+	obj.attack("Robot 2");
 
-	ScavTrap obj1;
-
-	obj1 = obj;
-	// obj1.display();
 
 	obj.guardGate();
 

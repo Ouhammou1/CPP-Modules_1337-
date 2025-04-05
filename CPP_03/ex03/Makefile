@@ -6,7 +6,7 @@
 #    By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/30 03:45:53 by bouhammo          #+#    #+#              #
-#    Updated: 2025/04/04 14:38:27 by bouhammo         ###   ########.fr        #
+#    Updated: 2025/04/05 15:47:37 by bouhammo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ NAME= a.out
 
 all:$(NAME)
 
-%.o:%.cpp HEADER
+%.o:%.cpp $(HEADER)
 	$(CC) $(CPPFLAGS) -c $< -o $@
 
 $(NAME):$(OBJS)
@@ -36,6 +36,3 @@ fclean:clean
 
 re : fclean all
 
-OK:all clean 
-	@echo "\n\n\033[4;31mMAKE AND EXECUTE PROGRAM\033[0m\n\n"
-	@./$(NAME)

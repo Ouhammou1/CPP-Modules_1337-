@@ -6,7 +6,7 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/29 04:13:37 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/04/04 22:38:57 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/04/05 12:42:06 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ ScavTrap::ScavTrap() : ClapTrap()
 	std::cout << "Default ScavTrap constructor called" << std::endl;
 	this->hitPoint = 100;
 	this->enePoint = 50;
-	this->attdamage = 20;
+	this->attdamage = 30;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
@@ -26,7 +26,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	std::cout << "Parameterized ScavTrap constructor called "  << std::endl;
 	this->hitPoint = 100;
 	this->enePoint = 50;
-	this->attdamage = 20;
+	this->attdamage = 30;
 	
 }
 ScavTrap::ScavTrap(const ScavTrap &original): ClapTrap(original)
@@ -50,20 +50,4 @@ ScavTrap::~ScavTrap()
 void ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap " << name << " is now in Gate Keeper mode!" << std::endl;
-}
-void 	ScavTrap::attack(const std::string& target)
-{
-	if(hitPoint == 0 )
-	{
-		std::cerr << "Error ... " << name << " has no Hit Points left and can't attack!" << std::endl;
-		return;
-	}
-	if(enePoint == 0)
-	{
-		std::cerr << "Error ... " << name << " has no Energy Points left and can't attack!" << std::endl;
-		return;
-	}
-	std::cout << "ClapTrap " << name << " attacks " << target 
-	<< " causing " << attdamage << " points of damage!"<< std::endl;
-	enePoint--;
 }

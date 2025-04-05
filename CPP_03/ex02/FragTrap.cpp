@@ -6,7 +6,7 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 03:53:48 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/03/30 04:58:50 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/04/05 15:40:43 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,6 @@ FragTrap::~FragTrap()
 
 void FragTrap::highFivesGuys(void)
 {
-	std::cout << "FragTrap is asking for a high five!" << std::endl;
+	std::cout << "FragTrap " << name << " requests a HIGH FIVE!" << std::endl;
 }
 	

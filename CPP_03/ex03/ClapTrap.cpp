@@ -6,13 +6,13 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 03:35:32 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/04/04 22:30:29 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/04/05 22:31:09 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include  "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(): name("name") , hitPoint(100), enePoint(100) , attdamage(30)
+ClapTrap::ClapTrap(): name("name") , hitPoint(100), enePoint(50) , attdamage(30)
 {
 	std::cout << "Default ClapTrap constructor  called" << std::endl;
 }
@@ -22,7 +22,7 @@ ClapTrap::~ClapTrap()
 	std::cout << "The destructor of the ClapTrap is called." << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : name(name), hitPoint(100), enePoint(100) , attdamage(30)
+ClapTrap::ClapTrap(std::string name) : name(name), hitPoint(100), enePoint(50) , attdamage(30)
 {
 	std::cout << "Parameterized ClapTrap constructor of the ClapTrap called."  << std::endl;
 }
@@ -79,7 +79,7 @@ void 	ClapTrap::takeDamage(unsigned int amount)
 	{
 		hitPoint =  hitPoint - amount;
 	}
-	std::cout << "ClapTrap " << name << " takes " << hitPoint << " points of damage!" << std::endl;
+	std::cout << "ClapTrap " << name << " takes " << amount << " points of damage!" << std::endl;
 }
 void 	ClapTrap::beRepaired(unsigned int amount)
 {

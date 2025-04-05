@@ -6,7 +6,7 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 03:49:23 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/04/04 22:12:55 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/04/05 22:40:06 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,31 +18,26 @@
 
 int main()
 {
-    std::cout << "GOOD  " << std::endl;
+    DiamondTrap ft1;
+    std::cout << std::endl;
 
-    DiamondTrap obj("mohmad");
+    DiamondTrap ft2("Carlo Ancelotti");
+    std::cout << std::endl;
 
+    DiamondTrap ft3 = ft2;
+    std::cout << std::endl;
 
-
-    obj.display();
-    DiamondTrap obj1;
-    
-    obj1 = obj;
-    obj1.display();
-    // obj1.display1();
-    // obj.display1();
-
-    // obj.attack("nice");
-
-    // obj.whoAmI();
-    // ScavTrap  obbj;
-    // ClapTrap *ptr;
-
-    // ptr = &obbj;
-
-    // ptr->attack("Roobot ");
+    DiamondTrap ft4;
+    ft4 = ft2;
+    std::cout << std::endl;
 
 
-    
+	ft2.attack("Pep guardiola");
+	ft2.beRepaired(87);
+    std::cout << std::endl;
+
+    ft2.whoAmI();
+    std::cout << std::endl;
+
     return 0;
 }

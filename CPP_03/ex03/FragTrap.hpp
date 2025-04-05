@@ -6,7 +6,7 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 03:53:55 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/04/04 22:31:49 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/04/05 22:44:55 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ public:
 	FragTrap(std::string name);
 	FragTrap(const FragTrap &original);
 	FragTrap& operator=(const FragTrap &original);
-	~FragTrap();
-
+	~FragTrap(); 
+ 
 	void highFivesGuys(void);
 };
 

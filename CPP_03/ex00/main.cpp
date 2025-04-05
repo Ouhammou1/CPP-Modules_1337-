@@ -6,7 +6,7 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 04:39:56 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/03/29 04:02:32 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/04/05 13:30:28 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int  main()
 	clap2.takeDamage(6);
 
 	std::cout  << "Energy Depletion " << std::endl << std::endl;
-	for (int i = 0; i < 11; i++)
+	for (int i = 0; i < 3; i++)
 	{
 		clap2.attack("Robot 1");
 	}
