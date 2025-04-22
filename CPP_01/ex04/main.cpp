@@ -6,7 +6,7 @@
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 04:56:05 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/03/21 04:26:46 by bouhammo         ###   ########.fr       */
+/*   Updated: 2025/04/09 21:36:05 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void 	ReplaceinFile(std::string line, std::fstream  &name ,std::string  s1, std::string  s2 , bool addNewline)
 {
-	if (s1.empty() ||  s1 == s2)
+	if (s1.empty() )
 		return ;
 	
 	size_t pos = line.find(s1);
