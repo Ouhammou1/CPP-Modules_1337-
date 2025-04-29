@@ -1,5 +1,5 @@
 CC=c++
-CPPFLAG=-Wall -Wextra -Werrro
+CPPFLAG=-Wall -Wextra -Werror -std=c++98
 CPPFILES=$(shell find . -name '*.cpp')
 HEADER=$(shell find . -name '*.hpp')
 OBJS=$(CPPFILES:.cpp=.o)
