@@ -5,42 +5,47 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/06 12:05:34 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/05/10 21:56:10 by bouhammo         ###   ########.fr       */
+/*   Created: 2025/09/19 11:26:10 by bouhammo          #+#    #+#             */
+/*   Updated: 2025/09/19 21:22:29 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
-
 int main()
 {
+    try{
+  
 
-    Bureaucrat bob1("bob1" , 75);
-    Bureaucrat bob2("bob2" , 7);
-    Form firstForm("Leave Request" , 0,50,30);
-    Form secondForm("Top Secrect" , 0, 1, 1);
+        int grade = 12;
+
+        Bureaucrat bure("brahim" , grade);
+        std::cout << bure << std::endl << std::endl ;
+
+        std::cout << "increment the grade " << std::endl;
+        bure.increment();
+        std::cout << bure << std::endl  << std::endl;
+
+        std::cout << "decrement the grade " << std::endl;
+        bure.decrement();
+        std::cout << bure << std::endl  ;
+
+        Form form("form1" , false ,45, 89);
+        std::cout << form  << std::endl << std::endl;
+
+        bure.signForm(form);
+        std::cout << form  << std::endl ;
 
 
-    std::cout << bob1 << std::endl;
-    std::cout << bob2 << std::endl;
+        
 
-    std::cout << firstForm << std::endl;
-    std::cout << secondForm << std::endl;
-
-    bob1.signForm(firstForm);
-    std::cout << firstForm << std::endl;
-
-    bob1.signForm(secondForm);
-    std::cout << secondForm << std::endl;
-    
-    bob2.signForm(firstForm);
-    std::cout << firstForm << std::endl;
+        
 
 
-
-    
-
+    }
+    catch(const std::exception &e)
+    {
+        std::cout << "Exception: " << e.what() << std::endl;
+    }
     return 0;
 }

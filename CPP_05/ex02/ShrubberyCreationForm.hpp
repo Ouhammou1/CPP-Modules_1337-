@@ -5,30 +5,37 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/13 12:38:08 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/05/18 11:18:22 by bouhammo         ###   ########.fr       */
+/*   Created: 2025/09/20 21:03:59 by bouhammo          #+#    #+#             */
+/*   Updated: 2025/09/25 11:58:34 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 
-#ifndef SHRUBBERY_H
-#define SHRUBBERY_H
+#ifndef SHRUBBERYCREATIONFORM
+#define SHRUBBERYCREATIONFORM
+
 #include "AForm.hpp"
-#include <fstream>
-class ShrubberyCreationForm  :public AForm
+#include "Bureaucrat.hpp"
+
+
+class ShrubberyCreationForm : public AForm
 {
 private:
     std::string target;
-    
 public:
+    ShrubberyCreationForm();
     ShrubberyCreationForm(std::string target);
+    ShrubberyCreationForm(const  ShrubberyCreationForm &other);
+    ShrubberyCreationForm &operator=(const ShrubberyCreationForm &other);
     ~ShrubberyCreationForm();
-    void    executeAction();
-    std::string    GetTarget();
 
 
+    void            executeAction(const Bureaucrat& bure) const;
+    std::string     GetTarget() const ;
 };
+
+
 
 
 

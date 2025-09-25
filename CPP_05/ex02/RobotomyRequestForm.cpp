@@ -5,37 +5,58 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/18 11:13:36 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/05/18 12:21:37 by bouhammo         ###   ########.fr       */
+/*   Created: 2025/09/21 12:25:42 by bouhammo          #+#    #+#             */
+/*   Updated: 2025/09/25 12:15:04 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include "AForm.hpp"
 #include "RobotomyRequestForm.hpp"
 
 
-RobotomyRequestForm::RobotomyRequestForm(  std::string target) :AForm("RobotomyRequestForm" ,0,72,45) , target(target)
+RobotomyRequestForm::RobotomyRequestForm() : AForm("RobotomyRequestForm" , false , 72, 137) , target("")
 {
 }
 
 RobotomyRequestForm::~RobotomyRequestForm()
 {
 }
-
-void   RobotomyRequestForm::executeAction()
+RobotomyRequestForm::RobotomyRequestForm(std::string target): AForm("RobotomyRequestForm" , false , 72, 137) , target(target)
 {
+    
+}
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& other): AForm(other) , target(other.target)
+{
+        
+}
+RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& other)
+{
+    if(this != &other)
+    {
+        AForm::operator=(other);
+        target = other.target;
+    }
+    return *this;
+}
+
+
+std::string    RobotomyRequestForm::GetTarget()  const
+{
+    return target;
+}
+
+void            RobotomyRequestForm::executeAction(const Bureaucrat& bure) const 
+{
+    if(this->GetIsSigned() == false)
+        throw AForm::FormNotSignedExcption();
+    if(bure.getGrade() > this->GetExecuteGrade() )
+        throw AForm::GradeTooLowException();
+        
     std::srand(std::time(0));
-    int id = std::rand();
-    if(id % 2 == 0)
-        std::cout << "robotomy success "<< std::endl;
+    int nbr = std::rand() ;
+    if( nbr %2 == 0)
+        std::cout << target <<" has been robotomized successfully "<< std::endl;
     else
-        std::cout << "robotomy failed" << std::endl;
-
-    return ;
+        std::cout << "The robotomy of " << target << " failed. " << std::endl;
+        
 }
 
-std::string    RobotomyRequestForm::GetTarget()
-{
-    return this->target;
-}

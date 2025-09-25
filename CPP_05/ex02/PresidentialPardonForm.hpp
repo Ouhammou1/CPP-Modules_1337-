@@ -5,35 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/18 12:21:48 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/05/18 12:26:51 by bouhammo         ###   ########.fr       */
+/*   Created: 2025/09/20 20:58:24 by bouhammo          #+#    #+#             */
+/*   Updated: 2025/09/25 12:18:02 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 
-
-
-
-#ifndef PRESIDENTIAL_H
-#define PRESIDENTIAL_H
+#ifndef  PRESIDENTIALPARDONFORM_HPP
+#define PRESIDENTIALPARDONFORM_HPP
 
 #include "AForm.hpp"
- 
-class PresidentialPardonForm :public AForm
+
+class PresidentialPardonForm : public AForm
 {
 private:
-    std::string  target;
+    std::string target;
 public:
-    PresidentialPardonForm(std::string  target);
+    PresidentialPardonForm();
+    PresidentialPardonForm(std::string targrt);
+    PresidentialPardonForm(const PresidentialPardonForm& other);
+    PresidentialPardonForm& operator=(const PresidentialPardonForm& other);
     ~PresidentialPardonForm();
 
-    void    executeAction();
-    std::string    GetTarget();
+    
 
+    void            executeAction(const Bureaucrat& bure) const ;
+    std::string     GetTarget() const ;
 };
 
 
-
-
- #endif
+#endif

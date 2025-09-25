@@ -5,25 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/13 12:21:11 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/05/13 12:25:27 by bouhammo         ###   ########.fr       */
+/*   Created: 2025/09/20 20:44:31 by bouhammo          #+#    #+#             */
+/*   Updated: 2025/09/25 12:07:12 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-
-
 #ifndef BUREAUCRAT_H
 #define BUREAUCRAT_H
-
 #include <iostream>
 #include "AForm.hpp"
 
+class AForm;
 class Bureaucrat
 {
 private:
-    const std::string  name;
-    int grade;
+    const   std::string name;
+    int     grade;
 public:
     Bureaucrat();
     Bureaucrat(std::string name , int grade);
@@ -31,41 +29,33 @@ public:
     Bureaucrat& operator=(const Bureaucrat &other);
     ~Bureaucrat();
 
-
-    void        increment();
-    void        decrement();
-    std::string getName() const;
-    int         getGrade() const;
-    void        setGrade(int grade);
-    
-    void        signForm(AForm &form);
-
-    
     class GradeTooHighException : public std::exception
     {
-    private:
-    public:
-        
-        const char *what() const throw();
+        public:
+        const char* what() const throw();
         GradeTooHighException() throw();
         ~GradeTooHighException() throw();
-
     };
-    
-    class GradeTooLowException : public std::exception
+    class GradeTooLowException :public std::exception 
     {
-    private:
-
-    public:
-        const char *what() const throw();
+        public:
+        const char * what() const throw();
         GradeTooLowException() throw();
         ~GradeTooLowException() throw();
     };
 
+
+    std::string getName()   const;
+    int  getGrade()         const;
+
+    void        increment();
+    void        decrement();
+
+    void    signForm( AForm &form);    
+    void    executeForm(const AForm &form) const ;
+
 };
-
-std::ostream&  operator<<(std::ostream &os , const Bureaucrat& b);
-
+std::ostream &operator<<(std::ostream &out , const Bureaucrat &bure);
 
 
 #endif

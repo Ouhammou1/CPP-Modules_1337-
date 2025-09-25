@@ -1,85 +1,76 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AForm.hpp                                          :+:      :+:    :+:   */
+/*   AAForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bouhammo <bouhammo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/13 12:21:38 by bouhammo          #+#    #+#             */
-/*   Updated: 2025/05/18 11:17:56 by bouhammo         ###   ########.fr       */
+/*   Created: 2025/09/20 20:42:12 by bouhammo          #+#    #+#             */
+/*   Updated: 2025/09/20 20:42:13 by bouhammo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-
-#ifndef FORMUP
-#define FORMUP
+#ifndef AFORM_H
+#define AFORM_H
 #include <iostream>
-#include "AForm.hpp"
-#include <string>
+#include "Bureaucrat.hpp"
 
 class Bureaucrat;
-class AForm
+class AForm 
 {
-    private:
-        const std::string name;
-        bool isSigned ;
-        const int gradeToSign;
-        const int gradeToExecute;
-        // std::string target;
-        
-
-    public:
-        AForm(std::string name ,int isSigned, int gradeToSign ,int gradeToExecute);
-        AForm();
-        AForm(const AForm& other);
-        AForm& operator=(const AForm& other);
-
-        
-        std::string getName()  const;
-        bool        getSigned()  const;
-        int         getGradeToSign()  const;
-        int         getGradeToExecute()  const;
-        
-        void        setSigned();
-
-        virtual   void    executeAction() =0;
-
-
-        void    beSigned(const Bureaucrat &bure);
-
-
-        ~AForm();
-        void    display()
-        {
-            std::cout << "name = " << name << std::endl;
-            std::cout << "isSigned = " << isSigned << std::endl;
-            std::cout << "gradeToSign = " << gradeToSign << std::endl;
-            std::cout << "gradeToExecute = " << gradeToExecute << std::endl;            
-        }
+private:
+    const       std::string name;
+    bool        is_signed;
+    const int   signGrade;
+    const int   executeGrade;
+public:
+    AForm();
+    AForm(std::string name , bool is_signed , const int signGrade , const int   executeGrade);
+    AForm(const AForm &other);
+    AForm& operator=(const AForm &other);
+    ~AForm();
 
 
 
+    std::string GetName() const;
+    bool        GetIsSigned() const;
+    int         GetSignGrade() const;
+    int         GetExecuteGrade() const;
 
-        class GradeTooHighException : public std::exception
-        {
-        private:
+
+    virtual void executeAction(const Bureaucrat& bure) const = 0 ;
+    void         execute(Bureaucrat const & executor) const;
+
+
+    void SetSigned(bool status);
+    void beSigned(const Bureaucrat& bure);
+
+    class  GradeTooHighException : public std::exception
+    {
         public:
             const char *what() const throw();
             GradeTooHighException() throw();
             ~GradeTooHighException() throw();
-        };       
-        
-        class GradeTooLowException : public std::exception
-        {
-        private:
+    };
+    class GradeTooLowException : public std::exception
+    {
         public:
-            const char *what() const throw();
-            GradeTooLowException() throw();
-            ~GradeTooLowException() throw();
-        };          
+        const char *what() const throw();
+        GradeTooLowException() throw();
+        ~GradeTooLowException() throw();
+    };
+
+    class FormNotSignedExcption : public std::exception
+    {
+        public:
+        const char* what() const throw();
+        FormNotSignedExcption() throw();
+        ~FormNotSignedExcption() throw();
+    };
 };
 
-std::ostream&  operator<<(std::ostream &os , const AForm& form);
+
+std::ostream& operator<<(std::ostream &out , const AForm &Aform);
 
 #endif
