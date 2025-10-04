@@ -94,8 +94,8 @@ void    testPresidentialPardonForm()
 int main()
 {
     testShrubberyCreationForm();
-    // testRobotomyRequestForm();
-    // testPresidentialPardonForm();
+    testRobotomyRequestForm();
+    testPresidentialPardonForm();
 
 
 
