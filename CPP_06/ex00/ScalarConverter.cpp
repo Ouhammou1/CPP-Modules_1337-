@@ -26,10 +26,21 @@ ScalarConverter& ScalarConverter::operator=(const ScalarConverter &other)
 
 
 
+void    convertFromChar(char c)
+{
+
+    double val = static_cast<double>(c);
+    printChar(val , false);
+}
+
 
 void  ScalarConverter::convert(std::string str)
 {
-    if(inValidInput(str))
-        printChar(str , true);
+    if(isChar(str))
+    {
+        
+        convertFromChar(str[0]);
+    }
+     
 }
 
