@@ -24,23 +24,21 @@ ScalarConverter& ScalarConverter::operator=(const ScalarConverter &other)
 }
 
 
-
-
-void    convertFromChar(char c)
-{
-
-    double val = static_cast<double>(c);
-    printChar(val , false);
-}
-
-
 void  ScalarConverter::convert(std::string str)
 {
     if(isChar(str))
-    {
-        
-        convertFromChar(str[0]);
-    }
-     
+        convertFromChar(str);
+
+    if(isInt(str))
+        convertFromNumber(str);
+
+    if(isDouble(str))
+        convertFromNumber(str);
+
+    if(isFloat(str))
+        convertFromNumber(str);
+
+    if(isPseudoLiteral(str))
+        convertFromPseudoLiteral(str);
 }
 

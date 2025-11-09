@@ -5,7 +5,7 @@ HEADER=$(shell find . -name '*.hpp')
 OBJS=$(CPPFILES:.cpp=.o)
 
 
-NAME=static_cast
+NAME=reinterpret_cast
 
 
 all:$(NAME)
