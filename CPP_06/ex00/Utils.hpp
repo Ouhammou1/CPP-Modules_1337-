@@ -4,18 +4,24 @@
 #include <limits>
 #include <cmath>
 
-bool inValidInput(std::string str);
-// void    printable();
+int         isNumric(std::string str);
+double      afterPoint(std::string input);
 
-bool isChar(std::string input);
-// bool isInt(std::string input);
-// bool isFloat(std::string input);
-// bool isDouble(std::string input);
+bool        isChar( std::string str);
+bool        isInt(std::string input);
+bool        isFloat( std::string input);
+bool        isDouble( std::string input);
+
+bool        checkIsInt(std::string input);
+bool        checkIsDouble(std::string input);
+bool        checkIsFloat(std::string input);
+bool        checkPointExist(double  number);
+bool        isPseudoLiteral(std::string input);
+
+void        convertFromNumber(std::string str);
+void        convertFromPseudoLiteral(std::string str);
 
 
-
-void printChar(double value, bool impossible);
-// void printInt(double value, bool impossible);
-// void printFloat(double value);
-// void printDouble(double value);
+double      convertToNumber(std::string input);
+void        convertFromChar(std::string str);
 #endif
