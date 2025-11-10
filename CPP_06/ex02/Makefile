@@ -5,7 +5,15 @@ HEADER=$(shell find . -name '*.hpp')
 OBJS=$(CPPFILES:.cpp=.o)
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD:CPP_06/ex02/Makefile
 NAME=dynamic_cast
+=======
+NAME=reinterpret_cast
+>>>>>>> 27eabb6cd3c1c3bc408ba35287bfa8ecf390e19a:CPP_06/ex01/Makefile
+=======
+NAME=dynamic_cast
+>>>>>>> 27eabb6cd3c1c3bc408ba35287bfa8ecf390e19a
 
 
 all:$(NAME)

@@ -1,8 +1,11 @@
 #include "generater.hpp"
 #include "Base.hpp"
+<<<<<<< HEAD
 #include "A.hpp"
 #include "B.hpp"
 #include "C.hpp"
+=======
+>>>>>>> 27eabb6cd3c1c3bc408ba35287bfa8ecf390e19a
 #include <iostream>
 
 Base * generate(void)
