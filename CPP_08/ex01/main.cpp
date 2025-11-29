@@ -15,15 +15,12 @@ int main()
 
         std::cout <<  std::endl <<"             Testing Span with a large number " << std::endl << std::endl;
             
-        Span span = Span(100000);
+        Span span = Span(20000);
+        std::vector<int> v1 ;
         for(size_t i = 0 ; i < 20000 ; i++ )
-        {
-            span.addNumber(-6 );
-            span.addNumber(3 );
-            span.addNumber(-17 );
-            span.addNumber(9 );
-            span.addNumber(11 );
-        }
+            v1.push_back(i * 1.5);
+        
+        span.addNumbers(v1.begin() , v1.end());
         std::cout << span.shortestSpan() << std::endl;
         std::cout << span.longestSpan() << std::endl;
 

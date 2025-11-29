@@ -7,7 +7,7 @@ class Span
 {
 private:
     unsigned int N;
-    std::vector< int> numbers;
+    std::vector<int> numbers;
 public:
     Span();
     Span(unsigned int N);
@@ -16,12 +16,23 @@ public:
     ~Span();
 
     void        addNumber( int n);
-    long         shortestSpan();
+
+    template <typename it>
+    void        addNumbers(it start , it end);
+    long        shortestSpan();
     long        longestSpan();
     void        display();
 };
 
-
+template<typename it>
+void        Span::addNumbers(it start , it end)
+{
+    size_t len = std::distance(start , end);
+    if(numbers.size() + len > N)
+        throw std::out_of_range("out of the range  ");
+    
+    numbers.insert(numbers.end() , start , end);
+}
 
 
 #endif

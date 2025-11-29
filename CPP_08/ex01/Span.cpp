@@ -30,10 +30,11 @@ Span& Span::operator=(const Span &other)
 void    Span::addNumber( int n)
 {
     if(numbers.size() >  N)
-        throw std::out_of_range("out of the range  4");
+        throw std::out_of_range("out of the range");
     
     numbers.push_back(n);
 }
+
 
 
 void    Span::display()

@@ -17,5 +17,4 @@ int  easyfind(T& container , int n)
     return (*it);
 }
 
-
 #endif
